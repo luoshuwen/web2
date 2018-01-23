@@ -1,0 +1,44 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="aftermain.master.cs" Inherits="aftermain" %>
+<%@ Register Assembly="CKEditor.NET" Namespace="CKEditor.NET" TagPrefix="CKEditor" %>
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+     
+    <script src="../ckeditor/ckeditor.js"></script>
+  
+    <script src="../ckfinder/ckfinder.js"></script>
+        <script type="text/javascript">
+            function out() {
+                if (window.event.toElement.id != "menu" && window.event.toElement.id != "link")
+                    menu.style.visibility = "hidden";
+            }
+
+    </script>
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+                <div>
+
+            <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="../after/aftermanager.aspx">首页</asp:HyperLink>
+           &nbsp;<asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="../after/afterarticle.aspx">文章</asp:HyperLink>
+    
+
+            &nbsp;<asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="../after/aftermanager.aspx">admin</asp:HyperLink>
+
+        </div>
+    <div>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+          <div>
+            <a href="http://www.ouc.edu.cn/">中国海洋大学</a> <a href="http://it.ouc.edu.cn/itstudio/">爱特工作室</a>
+        </div>
+    </form>
+</body>
+</html>
